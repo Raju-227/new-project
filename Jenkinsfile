@@ -34,19 +34,16 @@ pipeline {
           }
         }
 
-        stage('Deploy to Docker Swarm') {
+       stage('Deploy to Docker Swarm') {
             steps {
-                script {
-                    sh """
+                sh """
                     docker service rm biriyani-house || true
-                    docker service create \
-                      --name biriyani-house \
-                      --publish 8070:80 \
-                      ${IMAGE_NAME}:${TAG}
-                    """
+                    docker service create --name biriyani-house -p 8070:80 ${Raju}:${TAG}
+                """
                 }
             }
         }
+    }
         
     post {
         always {
