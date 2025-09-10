@@ -13,11 +13,10 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    dockerImage = docker.build("${IMAGE_NAME}:${TAG}")
-                }
+            stage('Build Docker Image') {
+    steps {
+        sh 'docker build -t raju925/biriyani-house:latest .'
+
             }
         }
 
@@ -29,12 +28,10 @@ pipeline {
             }
         }
 
-        stage('Push Docker Image') {
-            steps {
-                script {
-                    dockerImage.push("${TAG}")
-                }
-            }
+       stage('Push Docker Image') {
+    steps {
+        sh 'docker push raju925/biriyani-house:latest'
+          }
         }
 
         stage('Deploy to Docker Swarm') {
@@ -50,8 +47,7 @@ pipeline {
                 }
             }
         }
-    }
-
+        
     post {
         always {
             echo 'Pipeline finished.'
