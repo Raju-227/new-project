@@ -37,7 +37,7 @@ pipeline {
        stage('Deploy to Docker Swarm') {
             steps {
                 sh """
-                    docker service rm biriyani-house || true
+            ssh raju@manager-node 'docker stack deploy -c docker-compose.yml biriyani-house'
                     docker service create --name biriyani-house -p 8070:80 ${Raju}:${TAG}
                 """
                 }
