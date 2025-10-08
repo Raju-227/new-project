@@ -1,137 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Biriyani House</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>__mr._raj__ | Instagram Profile</title>
   <style>
     body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff8f0;
+      padding: 0;
     }
-
-    header {
-      background-color: #8B0000;
-      color: white;
-      padding: 1.2rem;
+    .profile {
       text-align: center;
+      padding: 40px 20px;
     }
-
-    nav {
-      background-color: #660000;
-      display: flex;
-      justify-content: center;
-      padding: 0.5rem 0;
+    .profile img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border: 3px solid #fff;
     }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
+    .username {
+      font-size: 24px;
       font-weight: bold;
+      margin-top: 10px;
     }
-
-    nav a:hover {
-      text-decoration: underline;
+    .bio {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 5px;
     }
-
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1613145993489-74d04ef2e7db');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
+    .stats {
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px #000;
-      font-size: 2rem;
+      gap: 30px;
+      margin: 20px 0;
     }
-
-    .content {
-      padding: 2rem;
-    }
-
-    .menu {
-      margin-top: 2rem;
-    }
-
-    .menu h2 {
-      color: #8B0000;
-    }
-
-    .menu-item {
-      background-color: #fff;
-      margin: 1rem 0;
-      padding: 1rem;
-      border-left: 5px solid #8B0000;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .contact {
-      margin-top: 3rem;
-    }
-
-    footer {
+    .stat {
       text-align: center;
-      background-color: #8B0000;
-      color: white;
-      padding: 1rem;
-      margin-top: 3rem;
+    }
+    .stat strong {
+      display: block;
+      font-size: 18px;
+    }
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+    .posts img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Biriyani House</h1>
-    <p>The Taste of Authentic Indian Biriyani</p>
-  </header>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Menu</a>
-    <a href="#">Order</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <div class="hero">
-    <div>Fresh. Spicy. Delicious.</div>
+  <div class="profile">
+    <img src="profile.jpg" alt="Profile Photo">
+    <div class="username">__mr._raj__</div>
+    <div class="bio">always you..✨❤️<br>Destiny...❤️</div>
   </div>
 
-  <div class="content">
-    <section class="menu">
-      <h2>Our Popular Dishes</h2>
-
-      <div class="menu-item">
-        <h3>Hyderabadi Chicken Biriyani</h3>
-        <p>Long-grained basmati rice cooked with tender chicken and traditional spices.</p>
-      </div>
-
-      <div class="menu-item">
-        <h3>Veg Dum Biriyani</h3>
-        <p>Layered rice and vegetables slow-cooked with saffron and mint.</p>
-      </div>
-
-      <div class="menu-item">
-        <h3>Mutton Biriyani</h3>
-        <p>Rich, spicy, and aromatic mutton cooked to perfection in royal spices.</p>
-      </div>
-    </section>
-
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Location:</strong> 123 Spice Street, Flavor Town</p>
-      <p><strong>Phone:</strong> +91 98765 43210</p>
-      <p><strong>Email:</strong> contact@biriyanihouse.com</p>
-    </section>
+  <div class="stats">
+    <div class="stat">
+      <strong>8</strong> Posts
+    </div>
+    <div class="stat">
+      <strong>378</strong> Followers
+    </div>
+    <div class="stat">
+      <strong>172</strong> Following
+    </div>
   </div>
 
-  <footer>
-    &copy; 2025 Biriyani House. All rights reserved.
-  </footer>
-
+  <div class="posts">
+    <img src="post1.jpg" alt="Post 1">
+    <img src="post2.jpg" alt="Post 2">
+    <img src="post3.jpg" alt="Post 3">
+  </div>
 </body>
 </html>
-
