@@ -33,15 +33,15 @@ pipeline {
         sh 'docker push raju925/insta:latest'
           }
         }
+stage('Deploy to Docker Swarm') {
+    steps {
+        sh """
+        ssh raju@manager-node 'docker stack deploy -c docker-compose.yml insta'
+        docker service create --name jcon -p 8081:80 ${insta}:${raj}
+        """
+    }
+}
 
-       stage('Deploy to Docker Swarm') {
-            steps {
-                sh """
-            ssh raju@manager-node 'docker stack deploy -c docker-compose.yml insta'
-                    docker service create --name jcon -p 8081:80 ${Raju}:${TAG}
-                """
-                }
-            }
         }
         
     post {
