@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "raju925/biriyani-house"
+        IMAGE_NAME = "raju925/insta"
         TAG = "latest"
     }
 
@@ -15,7 +15,7 @@ pipeline {
 
             stage('Build Docker Image') {
     steps {
-        sh 'docker build -t raju925/biriyani-house:latest .'
+        sh 'docker build -t raju925/insta:latest .'
 
             }
         }
@@ -30,15 +30,15 @@ pipeline {
 
        stage('Push Docker Image') {
     steps {
-        sh 'docker push raju925/biriyani-house:latest'
+        sh 'docker push raju925/insta:latest'
           }
         }
 
        stage('Deploy to Docker Swarm') {
             steps {
                 sh """
-            ssh raju@manager-node 'docker stack deploy -c docker-compose.yml biriyani-house'
-                    docker service create --name biriyani-house -p 8070:80 ${Raju}:${TAG}
+            ssh raju@manager-node 'docker stack deploy -c docker-compose.yml insta'
+                    docker service create --name jcon -p 8081:80 ${Raju}:${TAG}
                 """
                 }
             }
